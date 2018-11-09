@@ -114,32 +114,27 @@ turkish = {
     u'ü': u'u', u'Ü': u'U', u'ö': u'o', u'Ö': u'O', u'ğ': u'g', u'Ğ': u'G'
 }
 
-russian = (
-    {
-        u'юй': u'yuy', u'ей': u'yay',
-        u'Юй': u'Yuy', u'Ей': u'Yay'
-    },
-    {
+russian = {
     u'а': u'a',  u'б': u'b',  u'в': u'v',  u'г': u'g', u'д': u'd', u'е': u'e',
-    u'ё': u'yo', u'ж': u'zh', u'з': u'z',  u'и': u'i', u'й': u'y', u'к': u'k',
+    u'ё': u'e', u'ж': u'zh', u'з': u'z',  u'и': u'i', u'й': u'i', u'к': u'k',
     u'л': u'l',  u'м': u'm',  u'н': u'n',  u'о': u'o', u'п': u'p', u'р': u'r',
-    u'с': u's',  u'т': u't',  u'у': u'u',  u'ф': u'f', u'х': u'h', u'ц': u'c',
-    u'ч': u'ch', u'ш': u'sh', u'щ': u'sh', u'ъ': u'',  u'ы': u'y', u'ь': u'',
-    u'э': u'e',  u'ю': u'yu', u'я': u'ya',
+    u'с': u's',  u'т': u't',  u'у': u'u',  u'ф': u'f', u'х': u'kh', u'ц': u'ts',
+    u'ч': u'ch', u'ш': u'sh', u'щ': u'shch', u'ъ': u'ie', u'ы': u'y', u'ь': u'',
+    u'э': u'e',  u'ю': u'iu', u'я': u'ia',
 
     u'А': u'A',  u'Б': u'B',  u'В': u'V',  u'Г': u'G', u'Д': u'D', u'Е': u'E',
-    u'Ё': u'Yo', u'Ж': u'Zh', u'З': u'Z',  u'И': u'I', u'Й': u'Y', u'К': u'K',
+    u'Ё': u'E', u'Ж': u'Zh', u'З': u'Z',  u'И': u'I', u'Й': u'I', u'К': u'K',
     u'Л': u'L',  u'М': u'M',  u'Н': u'N',  u'О': u'O', u'П': u'P', u'Р': u'R',
-    u'С': u'S',  u'Т': u'T',  u'У': u'U',  u'Ф': u'F', u'Х': u'H', u'Ц': u'C',
-    u'Ч': u'Ch', u'Ш': u'Sh', u'Щ': u'Sh', u'Ъ': u'',  u'Ы': u'Y', u'Ь': u'',
-    u'Э': u'E',  u'Ю': u'Yu', u'Я': u'Ya',
-})
+    u'С': u'S',  u'Т': u'T',  u'У': u'U',  u'Ф': u'F', u'Х': u'Kh', u'Ц': u'Ts',
+    u'Ч': u'Ch', u'Ш': u'Sh', u'Щ': u'Shch', u'Ъ': u'Ie',  u'Ы': u'Y', u'Ь': u'',
+    u'Э': u'E',  u'Ю': u'Iu', u'Я': u'Ia',
+}
 
-ukrainian = (russian[0].copy(), {
+ukrainian = {
     u'Є': u'Ye', u'І': u'I', u'Ї': u'Yi', u'Ґ': u'G',
     u'є': u'ye', u'і': u'i', u'ї': u'yi', u'ґ': u'g',
-})
-ukrainian[1].update(russian[1])
+}
+ukrainian.update(russian)
 
 czech = {
     u'č': u'c', u'ď': u'd', u'ě': u'e', u'ň': u'n', u'ř': u'r', u'š': u's',
@@ -162,13 +157,13 @@ latvian = {
     u'Ļ': u'L', u'Ņ': u'N', u'Š': u'S', u'Ū': u'u', u'Ž': u'Z',
 }
 
-kazakh = (russian[0].copy(), {
+kazakh = {
     u'ә': u'a', u'ғ': u'g', u'қ': u'k', u'ң': 'n', u'ө': u'o', u'ұ': u'u',
     u'ү': u'u', u'һ': u'h', u'і': u'i',
     u'Ә': u'A', u'Ғ': u'G', u'Қ': u'K', u'Ң': 'N', u'Ө': u'O', u'Ұ': u'U',
     u'Ү': u'U', u'Һ': u'H', u'І': u'I',
-})
-kazakh[1].update(russian[1])
+}
+kazakh.update(russian)
 
 farsi = {
     u'ا': u'a',

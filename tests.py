@@ -40,10 +40,10 @@ def ru_src():
 @pytest.fixture(scope='module')
 def ru_encoded():
     return u"""
-    -- Raskudrit tvoyu cherez koromyslo v boga dushu mat
-             trista tysyach raz edrenu vosh tebe v krylo
-             i kaktus v glotku! -- vzrevel razyarennyy Nikodim.
-    -- Amin, -- robko dobavil iz sklepa papa Piy.
+    -- Raskudrit tvoiu cherez koromyslo v boga dushu mat
+             trista tysiach raz edrenu vosh tebe v krylo
+             i kaktus v glotku! -- vzrevel razieiarennyi Nikodim.
+    -- Amin, -- robko dobavil iz sklepa papa Pii.
                  (c) G. L. Oldi, "Skazki dedushki vampira"."""  # noqa
 
 
@@ -87,7 +87,7 @@ def test_ansii_slug(trans):
 
 @pytest.mark.parametrize('trans', trans_funcs)
 def test_natural(trans, ru_src, ru_encoded, farsi_src, farsi_encoded):
-    assert trans(u'йцукен') == u'ycuken'
+    assert trans(u'йцукен') == u'itsuken'
     assert trans(ru_src) == ru_encoded
     assert isinstance(trans(ru_src), unistr)
 
@@ -102,7 +102,7 @@ def test_russian_slug(trans, ru_src):
 
 @pytest.mark.parametrize('trans', trans_funcs)
 def test_russian_diphthongs(trans):
-    assert trans(u'Юй Икари...') == u'Yuy Ikari...'
+    assert trans(u'Юй Икари...') == u'Iui Ikari...'
 
 
 @pytest.mark.parametrize('trans', trans_funcs)
